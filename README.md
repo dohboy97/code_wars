@@ -1,0 +1,1 @@
+A repository for pushing my goal of doing a daily codewars challenge.
