@@ -3,12 +3,13 @@ function mygcd(x,y){
     let xVal = x
     
     let yVal = y
-    let divisor=0
+    let divisor
     
-    for (let i = 1; i <x && i < y; i++){
+    for (let i = 1; i < x+y ;i++){ 
       if(x%i === 0 && y%i === 0){
         divisor = i
       }
+      
     }
     return divisor
   }
