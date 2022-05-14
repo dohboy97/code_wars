@@ -3,9 +3,18 @@ function mygcd(x,y){
     let xVal = x
     
     let yVal = y
+    
+    let forSlowDown 
+        
+        if(xVal > yVal){
+          forSlowDown = xVal/2
+        }else{
+          forSlowDown = yVal/2
+        }
+    
     let divisor
     
-    for (let i = 1; i < x+y ;i++){ 
+    for (let i = 1; i < forSlowDown ;i++){ 
       if(x%i === 0 && y%i === 0){
         divisor = i
       }
