@@ -12,14 +12,15 @@ function spinningRings(innerMax, outerMax) {
     while(inner !== outer || turns < 1){
       //conditional that sets rings to 0 after their max
       
-      inner < 0 ? inner = innerMax : inner-=1;
+      inner <= 0 ? inner = innerMax : inner-=1;
       
-      outer > outerMax ? outer = 0 : outer+=1
+      outer >= outerMax ? outer = 0 : outer+=1
+      
+   
       
       turns++ //keeps track of total turns
     }
     
+    
     return turns
-    
-    
-  };
+}  
