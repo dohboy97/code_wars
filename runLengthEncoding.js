@@ -8,10 +8,18 @@ var runLengthEncoding = function(str){
     
     for(let i = 0; i< arr.length; i++){
       let toPush = [1,arr[i]]
+      
+      
+      
       while(arr[i]===arr[i+1]){
         toPush[0] = toPush[0]+1
+        i++
       }
+      
+      //needed to increment the while loop to prevent it from timing out
+      
       result.push(toPush)
+      
     }
     
     
