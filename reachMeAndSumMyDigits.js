@@ -10,16 +10,18 @@ function sumDigNthTerm(initval, patternl, nthterm) {
     if(indexCounter === patternl.length){
       indexCounter = 0
     }
-    
     val+= patternl[indexCounter]
-    
+     //term counter cannot be greater than nthterm, index counter gets reset to 0 once = patternl.length
     termCounter++
     indexCounter++
   }
   
-  //term counter cannot be greater than nthterm, index counter gets reset to 0 once = patternl.length
-  console.log(val)
-
-  //stringify the value at nth term in order to return the sum
+  //turn the val to an array to then add and return the individually added digits
+  let newArr = val.toString().split('').map(Number)
+  let sum = 0
+  newArr.forEach(element =>{
+    sum+=element
+  })
   
+  return sum
 }
