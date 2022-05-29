@@ -1,13 +1,18 @@
 function divisibleCount(x, y, k) {
     //code me
-    function divisibleCount(x, y, k) {
-        //code me
-       
-       // return array of nums from x to y
-       
-       //if (arr[i]%k === 0) {counter++}
-       
+   
+   let counter = 0
+   
+   for(let i = x; i <=y; i++){
+     if(i%k === 0){
+       counter++
      }
-     
+   }
+   
+   return counter
+   // for loop of nums from x to y
+   
+   //if (i%k === 0) {counter++}
+   
  }
  
