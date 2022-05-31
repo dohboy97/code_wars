@@ -5,7 +5,23 @@ var countDeafRats = function(town) {
     
     let badRats = 0
     
+    let arr = town.split('')
     
-    return 0;
+   
+    //two loops after findindexof p?
+    
+    let index = arr.findIndex(element => element === 'P')
+    
+    for(let i = index; i<arr.length;i++){
+      if(arr[i] === 'O' && arr[i-1]=== '~'){
+        badRats++
+      }
+    }
+      for(let i = index; i>=0;i--){
+      if(arr[i] === 'O' && arr[i+1]=== '~'){
+        badRats++
+    }
   }
-  
+    
+    return badRats;
+  }
