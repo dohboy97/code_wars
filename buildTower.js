@@ -1,12 +1,14 @@
 function towerBuilder(nFloors) {
-    // build here
+    var tower = [];
     
-    let tower = []
-    //array to contain the tower
+    for (var i = 1; i <= nFloors; i++) {
+      tower.push(makeFloor((nFloors*2),(i*2)));    
+    }
     
-    let floor = 1
-    //number of asteriks, add two each time in for loop
-    
-    //for loop will add the floors - need to also account for the spaces though
-    
-  }
+    return tower;
+}
+
+function makeFloor(width, stars) {
+    var padding = Math.floor((width - stars)/2)+1;
+    return Array(padding).join(' ') + Array(stars).join('*') + Array(padding).join(' ');  
+}
