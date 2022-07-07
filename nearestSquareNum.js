@@ -11,6 +11,10 @@ function nearestSq(n){
     closestLowSq -=1
   }
   
-  console.log(closestHighSq)
-  console.log(closestLowSq)
+  if(closestHighSq-n > n-closestLowSq){
+    return closestLowSq
+  }else{
+    return closestHighSq
+  }
+  
 }
